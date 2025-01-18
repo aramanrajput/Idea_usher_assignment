@@ -3,7 +3,7 @@ const app = express();
 require('dotenv').config();
 const { connect } = require("./src/Config/db");
 const PostController = require("./src/Controllers/Post.controller");
-
+const port = process.env.PORT || 8000
 
 app.use(express.json());
 
@@ -16,6 +16,6 @@ connect()
     console.log(err, "connection error");
   });
 
-app.listen("8000", () => {
+app.listen(port, () => {
   console.log("Server started on port 8000");
 });
