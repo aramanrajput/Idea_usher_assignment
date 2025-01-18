@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "5374ed82-e7f3-41c0-a621-04e4a3ba38a6",
+		"name": "idea usher assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18001478"
+	},
+	"item": [
+		{
+			"name": "get list of posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/post?page=1&limit=1",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"post"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/home/armansingh/Downloads/sample.png"
+						},
+						{
+							"key": "data",
+							"value": "{\n  \"title\": \"Introduction to Mongoose\",\n  \"description\": \"Learn how to use Mongoose for MongoDB data modeling.\",\n  \"author\": \"tom smith\",\n  \"createdAt\": \"2025-01-18T12:00:00.000Z\",\n  \"updatedAt\": null,\n  \"tags\": [\n    { \"name\": \"Mongoose\" },\n    { \"name\": \"Software Engineering\" }\n  ]\n}\n",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseurl}}/post",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseurl",
+			"value": "https://idea-usher-assignment.onrender.com"
+		}
+	]
+}
