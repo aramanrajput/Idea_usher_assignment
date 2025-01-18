@@ -16,6 +16,6 @@ connect()
     console.log(err, "connection error");
   });
 
-app.listen("9000", () => {
-  console.log("Server started on port 9000");
+app.listen("8000", () => {
+  console.log("Server started on port 8000");
 });
