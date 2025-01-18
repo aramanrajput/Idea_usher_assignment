@@ -3,7 +3,7 @@
 This document provides detailed information about the available API endpoints for creating and retrieving posts.
 
 ## Base URL
-The base URL for the API is:
+The base URL for the API is:https://idea-usher-assignment.onrender.com
 
 
 ## POST /post
